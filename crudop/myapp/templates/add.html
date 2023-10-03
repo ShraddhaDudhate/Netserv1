@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Member</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: middle;
+            align-items: middle;
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .centered-content {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centered-container">
+        <div class="centered-content">
+            <h1>Add Member</h1>
+            <form action="addrecord" method="post">
+                {% csrf_token %}
+                <label for="first">First Name:</label><br>
+                <input type="text" name="first"><br><br>
+                <label for="last">Last Name:</label><br>
+                <input type="text" name="last"><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
